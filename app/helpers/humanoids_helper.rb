@@ -1,0 +1,2 @@
+module HumanoidsHelper
+end
