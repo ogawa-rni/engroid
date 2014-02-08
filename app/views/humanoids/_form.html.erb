@@ -1,0 +1,17 @@
+<%= form_for(@humanoid) do |f| %>
+  <% if @humanoid.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@humanoid.errors.count, "error") %> prohibited this humanoid from being saved:</h2>
+
+      <ul>
+      <% @humanoid.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
